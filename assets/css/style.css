@@ -337,6 +337,7 @@ ul, li {
 .hero-section .hero-section__background img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .hero-section .hero-section__content-box {
     color: #fff;
@@ -391,12 +392,10 @@ ul, li {
     border-radius: 10px;
 }
 .create-account .create-account__content__details {
-    position: absolute;
+    position: relative;
     z-index: 2;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     color: #fff;
 }
 .create-account .create-account__content__details ul {
@@ -530,7 +529,6 @@ ul, li {
 .left-sidebar {
     width: 250px;
     height: 100%;
-    /* position: fixed; */
     left: 0;
     top: 72px;
 }
@@ -606,4 +604,94 @@ ul, li {
     font-size: 4rem;
     height: 100%;
     width: 95%;
+}
+@media only screen and (max-width:1260px) {
+    .container-l {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .nowrap,
+    .movie-genre .movie-genre__content ul li a,
+    .tvshow-genre .movie-genre__content ul li a,
+    .movie-genre .movie-genre__content ul,
+    .tvshow-genre .movie-genre__content ul {
+        flex-wrap: wrap;
+    }
+    .header .header__holder .header__menu, 
+    .header .header__holder .header__action,
+    .header .header__holder .header__menu .header__menu__list, ul {
+        gap: 25px;
+    }
+    .create-account .create-account__content .create-account__content__details ul.first {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .create-account .create-account__content__details ul li ul {
+        padding: 20px;
+    }
+    .categories-btn {
+        width: 36px;
+        height: 36px;
+    }
+    .categories-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    html {
+        font-size: 9px;
+    }
+    .header .header__holder {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .hero-section .hero-section__content-box {
+        padding-top: 150px;
+    }
+    .categories .categories-content ul {
+        justify-content: center;
+    }
+    .categories .categories-content ul li {
+        width: 25%;
+    }
+    .create-account .create-account__content__details .create-account__content__title {
+        font-size: 1.8rem;
+    }
+    .create-account .create-account__content__details ul li ul li {
+        font-size: 1.4rem;
+    } 
+}
+@media only screen and (max-width: 850px) {
+    html {
+        font-size: 8px;
+    }
+}
+@media only screen and (max-width: 660px) {
+    html {
+        font-size: 8px;
+    }
+    .footer .footer__content ul.gap-150px {
+        gap: 50px;
+    }
+    .create-account .create-account__content__details ul li ul li a {
+        padding: 15px;
+        min-width: 100px;
+    }
+    .create-account .create-account__content__details ul li ul li a {
+        min-width: auto;
+        height: auto;
+        padding: 10px;
+    }
+    .left-sidebar {
+        width: 200px;
+    }
+    .left-sidebar ul {
+        font-size: 1.2rem;
+    }
+    .header__action, .header .header__holder .header__menu .header__menu__list, ul {
+        gap: 0;
+    }
 }
