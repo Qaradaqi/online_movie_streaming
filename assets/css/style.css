@@ -605,6 +605,20 @@ ul, li {
     height: 100%;
     width: 95%;
 }
+.responsive-header {
+    display: none;
+    padding: 15px 30px;
+    background-color: #141414cc;
+}
+.responsive-header .hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #f1dac4;
+}
+.responsive-header .hamburger-menu:hover {
+    cursor: pointer;
+}
 @media only screen and (max-width:1260px) {
     .container-l {
         width: 90%;
@@ -621,15 +635,6 @@ ul, li {
     .header .header__holder .header__action,
     .header .header__holder .header__menu .header__menu__list, ul {
         gap: 25px;
-    }
-    .create-account .create-account__content .create-account__content__details ul.first {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        align-items: center;
-    }
-    .create-account .create-account__content__details ul li ul {
-        padding: 20px;
     }
     .categories-btn {
         width: 36px;
@@ -662,7 +667,19 @@ ul, li {
     }
     .create-account .create-account__content__details ul li ul li {
         font-size: 1.4rem;
-    } 
+    }
+    .movies.ptb-90px {
+        padding: 120px 0;
+    }
+    .create-account .create-account__content .create-account__content__details ul.first {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .create-account .create-account__content__details ul li ul {
+        padding: 20px;
+    }
 }
 @media only screen and (max-width: 850px) {
     html {
@@ -672,6 +689,17 @@ ul, li {
 @media only screen and (max-width: 660px) {
     html {
         font-size: 8px;
+    }
+    .header {
+        display: none;
+    }
+    .responsive-header {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 15;
     }
     .footer .footer__content ul.gap-150px {
         gap: 50px;
@@ -693,5 +721,25 @@ ul, li {
     }
     .header__action, .header .header__holder .header__menu .header__menu__list, ul {
         gap: 0;
+    }
+    .categories .categories-content ul li {
+        width: 50%;
+    }
+    .categories-content__header {
+        font-size: 1.4rem;
+    }
+    .btn {
+        font-size: 1.3rem;
+        padding: 5px;
+        height: 30px;
+    }
+    .right-sidebar .plr-50px {
+        padding: 0 20px;
+    }
+    .width-20 {
+        width: 50%;
+    }
+    .movies.ptb-90px {
+        padding: 60px 0;
     }
 }
